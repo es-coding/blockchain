@@ -1,0 +1,319 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "docHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "serial",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "docType",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "issuer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "issuedAt",
+						"type": "uint256"
+					}
+				],
+				"name": "DocumentIssued",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "documents",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "serial",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "docType",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "issuer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "issuedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "exists",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "getHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "docHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "serial",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "docType",
+						"type": "string"
+					}
+				],
+				"name": "issueDocument",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "serial",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "docType",
+						"type": "string"
+					}
+				],
+				"name": "issueDocumentFromString",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "serialToHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "docHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "verifyByHash",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "found",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "serial",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "docType",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "issuer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "issuedAt",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "serial",
+						"type": "string"
+					}
+				],
+				"name": "verifyBySerial",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "found",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "docHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "docType",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "issuer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "issuedAt",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Simple e-Meterai / Document Stamp Registry (No Revoke)",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getHash(string)": {
+					"notice": "Helper untuk hitung hash dari string (untuk testing / demo)"
+				},
+				"issueDocument(bytes32,string,string)": {
+					"notice": "Terbitkan dokumen dengan hash yang sudah dihitung di backend"
+				},
+				"issueDocumentFromString(string,string,string)": {
+					"notice": "Terbitkan dokumen langsung dari string (untuk demo/pengujian)"
+				},
+				"verifyByHash(bytes32)": {
+					"notice": "Verifikasi berdasarkan hash dokumen"
+				},
+				"verifyBySerial(string)": {
+					"notice": "Verifikasi berdasarkan serial number"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"DocumentVerification.sol": "DocumentStampRegistry"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"DocumentVerification.sol": {
+			"keccak256": "0x517747c7dde8b452ec001ba39454a6f1a002de31a5502eebd96dd691f680c6bd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1408f262303c39af4f32bc03bc0e3d76b2658c7a1ae48c70b37aa3b08bf32b9f",
+				"dweb:/ipfs/QmbMdRnxKPcFVEkNw2idYMHobfmbA2K12ozSLdzFD2FAYg"
+			]
+		}
+	},
+	"version": 1
+}
